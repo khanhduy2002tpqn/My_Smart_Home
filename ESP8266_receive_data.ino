@@ -18,7 +18,6 @@
 #define IN2 4
 #define IN3 14
 #define IN4 12
-#define melodyPin 2
 
 #include <DHT.h>
 #include <ESP8266WiFi.h>
@@ -130,29 +129,7 @@ BLYNK_CONNECTED()
   Blynk.setProperty(V3, "onImageUrl",  "https://static-image.nyc3.cdn.digitaloceanspaces.com/general/fte/congratulations_pressed.png");
   Blynk.setProperty(V3, "url", "https://docs.blynk.io/en/getting-started/what-do-i-need-to-blynk/how-quickstart-device-was-made");
 }
-int wish_melody[] = {
-  NOTE_B3, 
-  NOTE_F4, NOTE_F4, NOTE_G4, NOTE_F4, NOTE_E4,
-  NOTE_D4, NOTE_D4, NOTE_D4,
-  NOTE_G4, NOTE_G4, NOTE_A4, NOTE_G4, NOTE_F4,
-  NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_A4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_G4,
-  NOTE_F4, NOTE_D4, NOTE_B3, NOTE_B3,
-  NOTE_D4, NOTE_G4, NOTE_E4,
-  NOTE_F4
-};
 
-int wish_tempo[] = {
-  4,
-  4, 8, 8, 8, 8,
-  4, 4, 4,
-  4, 8, 8, 8, 8,
-  4, 4, 4,
-  4, 8, 8, 8, 8,
-  4, 4, 8, 8,
-  4, 4, 4,
-  2
-};
 // This function sends Arduino's uptime every second to Virtual Pin 2.
 void myTimerEvent()
 {
